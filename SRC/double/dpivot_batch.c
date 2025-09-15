@@ -122,7 +122,7 @@ dpivot_batch(
 
 	if ( !factored ) { /* Skip this if already factored. */
 	    
-	    int_t *perm_r = RpivPtr[d];
+	    int_t *perm_r = (int_t *) RpivPtr[d];
 
 	    /* ------------------------------------------------------------
 	       Find the row permutation for A.
