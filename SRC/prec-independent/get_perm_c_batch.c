@@ -83,14 +83,14 @@ get_perm_c_batch(
     int_t bnz;
     int_t *b_colptr, *b_rowind;  /* allocated in at_plus_a() or getata() */
     int_t nofsub;
-    int i, j;
+    int_t i, j;
     double t;
 	
     /* Loop through each matrix in the batch */
     for (int d = 0; d < batchCount; ++d) {
 	
 	NCformat *Astore = (NCformat *) A[d]->Store;
-	int *perm_c = CpivPtr[d];
+	int_t *perm_c = CpivPtr[d];
 
 	t = SuperLU_timer_();
 	bnz = 0;
