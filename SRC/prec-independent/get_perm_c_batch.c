@@ -90,7 +90,7 @@ get_perm_c_batch(
     for (int d = 0; d < batchCount; ++d) {
 	
 	NCformat *Astore = (NCformat *) A[d]->Store;
-	int_t *perm_c = CpivPtr[d];
+	int_t *perm_c = (int_t *) CpivPtr[d];
 
 	t = SuperLU_timer_();
 	bnz = 0;
